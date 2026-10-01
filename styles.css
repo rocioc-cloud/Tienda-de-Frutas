@@ -626,3 +626,21 @@ footer { background: #0c2e1d; color: rgba(255,255,255,.54); }
   .chatbot-toggle > span:last-child { display: none; }
   .chatbot-panel { width: calc(100vw - 32px); }
 }
+
+/* Botones principales con el verde de la marca */
+.header-cta,
+.button-primary {
+  background: #1f6b3a;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(31,107,58,.24);
+}
+.header-cta:hover,
+.button-primary:hover {
+  background: #174f2c;
+  color: #fff;
+}
+.header-cta::after,
+.button-primary::after {
+  background: #dbea82;
+  color: #174f2c;
+}
