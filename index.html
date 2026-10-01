@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body>
   <div class="announcement">
@@ -131,7 +131,32 @@
 
   <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">O</span><span><strong>Frutas Orfa</strong><small>Fresco, rico y natural</small></span></a><p>Venta por kilo y por caja · Atención para hogares y negocios</p><p>© <span id="year"></span> Frutas Orfa</p></footer>
 
-  <a class="floating-whatsapp" href="https://wa.me/51982553666?text=Hola%20Frutas%20Orfa,%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Contactar a Frutas Orfa por WhatsApp"><span>●</span> WhatsApp</a>
+  <section class="chatbot" aria-label="Asistente virtual de Frutas Orfa">
+    <div class="chatbot-panel" id="chatbot-panel" hidden>
+      <header class="chatbot-header">
+        <div class="chatbot-avatar" aria-hidden="true">O</div>
+        <div><strong>Asistente Orfa</strong><small>Respondemos tus consultas</small></div>
+        <button type="button" class="chatbot-close" id="chatbot-close" aria-label="Cerrar asistente">×</button>
+      </header>
+      <div class="chatbot-messages" id="chatbot-messages" aria-live="polite">
+        <div class="chat-message bot">¡Hola! Soy el asistente de Frutas Orfa. ¿En qué puedo ayudarte?</div>
+      </div>
+      <div class="chatbot-questions" aria-label="Preguntas rápidas">
+        <button type="button" data-question="ubicacion">¿Dónde nos ubicamos?</button>
+        <button type="button" data-question="contacto">Números de contacto</button>
+        <button type="button" data-question="productos">Productos disponibles</button>
+      </div>
+      <form class="chatbot-form" id="chatbot-form">
+        <label class="sr-only" for="chatbot-input">Escribe tu pregunta</label>
+        <input id="chatbot-input" type="text" placeholder="Escribe tu pregunta..." autocomplete="off">
+        <button type="submit" aria-label="Enviar pregunta">➜</button>
+      </form>
+    </div>
+    <button type="button" class="chatbot-toggle" id="chatbot-toggle" aria-expanded="false" aria-controls="chatbot-panel">
+      <span class="chatbot-icon" aria-hidden="true">✦</span>
+      <span><strong>¿Necesitas ayuda?</strong><small>Pregúntale a Orfa</small></span>
+    </button>
+  </section>
   <script src="script.js"></script>
 </body>
 </html>
